@@ -2,7 +2,7 @@ resource "aws_ecs_task_definition" "main" {
   family                   = "${var.project}-${var.environment}-${var.service}"
   execution_role_arn       = var.execution_role_arn
   task_role_arn            = length(var.task_role_policy) != 0 ? aws_iam_role.main[0].arn : null
-  requires_compatibilities = ["FARGATE_SPOT"]
+  requires_compatibilities = ["FARGATE"]
   network_mode             = "awsvpc"
   cpu                      = var.cpu
   memory                   = var.memory
