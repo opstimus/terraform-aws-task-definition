@@ -46,14 +46,14 @@ This example demonstrates how to use the module to create an ECS task definition
 
 ```hcl
 module "ecs_task_definition" {
-  source              = "github.com/opstimus/terraform-aws-task-definition?ref=v<RELEASE>"
+  source                = "github.com/opstimus/terraform-aws-task-definition?ref=v<RELEASE>"
   
-  project             = "my-project"
-  environment         = "production"
-  service             = "api"
-  execution_role_arn  = "arn:aws:iam::123456789012:role/ecsTaskExecutionRole"
-  cpu                 = 256
-  memory              = 512
+  project               = "my-project"
+  environment           = "production"
+  service               = "api"
+  execution_role_arn    = "arn:aws:iam::123456789012:role/ecsTaskExecutionRole"
+  cpu                   = 256
+  memory                = 512
   container_definitions = jsonencode([
     {
       name      = "my-container"
