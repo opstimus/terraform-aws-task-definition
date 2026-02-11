@@ -10,14 +10,12 @@ This Terraform module creates an Amazon ECS (Elastic Container Service) task def
 |-----------|-----------|
 | terraform | >= 1.3.0  |
 | aws       | >= 6.0    |
-| external | >= 2.2.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | aws  | >= 6.0  |
-| external | >= 2.2.0 |
 
 ## Inputs
 
